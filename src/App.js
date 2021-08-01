@@ -32,10 +32,21 @@ function App() {
       return [expense,...prevValue];
     })
   }
+  function onDeleteExpense(prop) {
+    setExpenses((prevValue)=>{
+      return(
+        prevValue.filter(props=>{
+          return(
+            props.id!==prop
+          )
+        })
+      )
+    })
+  }
   return (
     <div>
       <NewExpense addExpense={handleAddExpense}/>
-      <Expense items={expenses} />
+      <Expense items={expenses} deleteExpense={onDeleteExpense}/>
     </div>
   );
 }

@@ -17,12 +17,14 @@ function Expense(props) {
       props.date.getFullYear().toString()===filteredYear
     );
   });
-
+  function onDeleteExpense(prop) {
+    props.deleteExpense(prop);
+  }
   return(
     <Card className='expenses'>
       <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
       <ExpenseChart expenses={filteredExpense}/>
-      <ExpenseList item={filteredExpense}/>
+      <ExpenseList item={filteredExpense} deleteExpense={onDeleteExpense}/>
     </Card>
   )
 }
