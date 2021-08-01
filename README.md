@@ -1,6 +1,6 @@
 # Project Deployed
 
-This project is Deployed at [Create React App](https://expensemarker.netlify.app/).
+This project is Deployed at [App](https://expensemarker.netlify.app/).
 
 # Getting Started with Create React App
 
