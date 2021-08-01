@@ -11,6 +11,7 @@ function ExpenseItem(props) {
       <div className="expense-item__description">
         <h2>{props.expenseTitle}</h2>
         <div className="expense-item__price">₹{props.expenseAmount}</div>
+        <button className="expense-item__del">del</button>
       </div>    
     </Card>
     </li>
