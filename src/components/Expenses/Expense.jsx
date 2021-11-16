@@ -6,8 +6,11 @@ import ExpenseList from './ExpenseList';
 import ExpenseChart from './ExpenseChart';
 
 function Expense(props) {
-
-  const [filteredYear, setFilteredYear] = React.useState('2020');
+  
+  const [filteredYear, setFilteredYear] = React.useState(()=>{
+    const x=new Date();
+    return x.getFullYear().toString();
+  });
 
   function filterChangeHandler(selectedYear) {
     setFilteredYear(selectedYear);
