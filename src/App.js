@@ -25,8 +25,22 @@ import NewExpense from "./components/newExpense/NewExpense";
 // ];
 
 function App() {
-  const [expenses,setExpenses]=React.useState(()=>
-  JSON.parse(localStorage.getItem('data'))||[]);
+  const [expenses,setExpenses]=React.useState(()=>{
+    if(JSON.parse(localStorage.getItem('data')))
+    {
+      var data=JSON.parse(localStorage.getItem('data'));
+      var newData=[];
+      data.forEach(element => {
+        const newdata={
+          ...element,
+          date: new Date(element.date)
+        }
+        newData.push(newdata)})
+      return newData;
+    }
+    else
+      return [];
+  });
 
   function handleAddExpense(expense) {
 
