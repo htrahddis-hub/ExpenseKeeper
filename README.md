@@ -4,7 +4,7 @@ This project is Deployed at [App](https://expensemarker.netlify.app/).
 
 The preview of the website.
 
-![alt text](./preview.jpg)
+![alt text](./Preview.jpg)
 
 # Getting Started with Create React App
 
